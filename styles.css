@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fff;
+}
+
+.navbar {
+  background-color: #ede9fe;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+}
+
+.navbar .navbar-center {
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  max-width: 1170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-center .menu-btn {
+  color: #6d28d9;
+  cursor: pointer;
+}
+.navbar-center .cart-btn {
+  color: #6d28d9;
+  position: relative;
+  cursor: pointer;
+}
+.navbar-center .cart-btn > i {
+  pointer-events: none;
+}
+
+.cart-btn .cart-item-num {
+  font-size: 18px;
+  color: white;
+  background-color: red;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+}
+
+/* products section  */
+.products-title {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 30px;
+  text-align: center;
+}
+.products {
+  display: flex;
+  justify-content: center;
+}
+
+.products-center {
+  width: 100%;
+  max-width: 1500px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.product {
+  background-color: #fffafa;
+  margin: 30px 20px;
+  flex-basis: 27%;
+  border-radius: 8px;
+  padding-bottom: 20px;
+}
+.product-img {
+  width: 100%;
+  height: 250px;
+  min-height: 120px;
+  border-radius: 8px 8px 0 0;
+}
+.product-description {
+  margin: 10px;
+  color: black;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.btn-container {
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.add-to-cart-btn {
+  padding: 10px 20px;
+  font-size: 15px;
+  background-color: #6d28d9;
+  color: rgb(255, 255, 255);
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+/* cart modal section */
+.cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 20;
+  width: 30rem;
+  padding: 1rem;
+  min-height: 200px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 20px 120px rgba(0, 0, 0, 0.07);
+  border-radius: 5px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  top: -100%;
+  left: 30%;
+}
+.cart-includings {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.cart-heading {
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 10px 0;
+}
+.cart-img-container {
+  width: 40%;
+  height: 70px;
+  margin: 10px;
+}
+.cart .p-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.cart .product-title {
+  font-weight: bold;
+  font-size: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 5px;
+}
+.cart .product-price {
+  opacity: 0.8;
+}
+.cart-controller {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cart-controller .fa-arrow-up {
+  color: blueviolet;
+  font-size: 15px;
+  cursor: pointer;
+}
+.cart-controller .fa-arrow-down {
+  color: red;
+  font-size: 15px;
+  cursor: pointer;
+}
+.fa-trash-can {
+  cursor: pointer;
+}
+/* backdrop*/
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 10;
+}
+/* cart footer */
+.cart-footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+}
+.cart-footer .total-paragraph {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cart-footer .clear-cart-btn {
+  border: 2px solid black;
+  border-radius: 5px;
+  color: blueviolet;
+  padding: 5px 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.cart-footer .confirm-cart-btn {
+  border-radius: 5px;
+  background-color: rgb(224, 201, 247);
+  color: blueviolet;
+  padding: 5px 20px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.bold {
+  font-weight: bold;
+}
